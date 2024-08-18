@@ -5,6 +5,7 @@ Overview
 Welcome to my healthcare data cleaning case study! This project is a deep dive into the steps I took to clean and prepare a dataset of 55,500 healthcare records. It was a challenging yet rewarding experience where I tackled common data issues to ensure the data was accurate, consistent, and ready for meaningful analysis.
 
 Objectives 
+
 In this case study, I aimed to:
 
 •	Remove Duplicates: I identified and removed duplicate entries to make sure every record was unique.
@@ -17,6 +18,7 @@ In this case study, I aimed to:
 •	Validate Date Sequences: I made sure that all discharge dates followed the corresponding admission dates, maintaining logical consistency in the dataset.
 
 Project Structure 
+
 Here’s how I’ve organized the project:
 
 •	data/: Contains the original and cleaned datasets. You can compare the before and after to see the impact of the cleaning process.
