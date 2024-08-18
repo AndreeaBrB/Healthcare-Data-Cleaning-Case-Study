@@ -31,4 +31,5 @@ How to Explore the Project
 •	Read the Case Study: The documentation folder contains the complete case study. It’s a detailed account of the entire process, from identifying issues to implementing solutions.
 
 A Personal Note 
+
 Working on this project was an incredible learning experience. It reinforced the importance of data cleaning in ensuring accurate and reliable analysis, especially in something as critical as healthcare data. I’m excited to share this work and hope it provides insight into the meticulous process of turning raw data into a valuable asset.
