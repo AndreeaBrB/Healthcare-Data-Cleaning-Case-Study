@@ -1,0 +1,144 @@
+**Data Cleaning Process: Healthcare Dataset**
+
+**Objective:**
+To clean and prepare a healthcare dataset containing patient information, billing details, and dates for accurate and reliable analysis.
+
+
+**Step 1: Remove Duplicates**
+
+**Action:**
+- Removed duplicate records to ensure that each entry in the dataset is unique.
+
+**Process:**
+1. Selected the entire dataset by clicking and dragging across the data range.
+2. Navigated to the `Data` tab in the Excel ribbon.
+3. Clicked on `Remove Duplicates`.
+4. Selected all relevant columns to check for duplicates.
+5. Clicked `OK` to remove duplicates, resulting in a dataset with only unique records.
+
+**Outcome:**
+- Duplicates were successfully removed, ensuring that each patient record is represented only once in the dataset.
+
+
+**Step 2: Handle Missing Data**
+
+**Action:**
+- Identified and addressed missing data to ensure completeness of the dataset.
+
+**Process:**
+1. Applied Conditional Formatting to highlight blank cells:
+   - Selected the data range and navigated to `Home > Conditional Formatting > New Rule`.
+   - Choose `Format only cells that contain` and select `Blanks`.
+   - Applied a fill colour to highlight missing data.
+2. For numerical columns, filled missing values using the column average:
+   - Used the formula `=AVERAGE(A2:A100)` to calculate the average, replacing the range with the appropriate column.
+   - Filled missing data with this average value.
+3. For text columns, fill missing values with "N/A" or a similar placeholder.
+
+**Outcome:**
+- Missing data was filled appropriately, ensuring that the dataset is complete and ready for analysis.
+
+
+**Step 3: Standardize Text Formatting**
+
+**Action:**
+- Standardized text formatting to ensure consistency across the dataset.
+
+**Process:**
+1. Created a new column next to each text column requiring standardization.
+2. Used the `PROPER` function to capitalize the first letter of each word:
+   - Entered the formula `=PROPER(A2)` in the first cell of the new column, replacing `A2` with the appropriate cell reference.
+   - Dragged the formula down the entire column to apply it to all rows.
+3. Copied the results and used `Paste Special > Values` to replace the original column with the standardized text.
+4. Deleted the temporary column used for the formula.
+
+**Outcome:**
+- Text fields were standardized, ensuring uniformity in names, medical conditions, and other categorical data.
+
+---
+
+**Step 4: Correct Data Types**
+
+**Action:**
+- Ensured that all columns were formatted with the correct data types for accurate calculations.
+
+**Process:**
+1. Selected columns containing dates, numbers, and text.
+2. Right-clicked on the selected columns and choose `Format Cells`.
+3. Applied the appropriate formats:
+   - **Dates:** Formatted as `Date`.
+   - **Numbers:** Formatted as `Number` or `Currency`.
+   - **Text:** Formatted as `Text`.
+4. Reviewed each column to ensure the format was applied correctly.
+
+**Outcome:**
+- Data types were correctly assigned, ensuring that all columns were properly formatted for analysis.
+
+
+**Step 5: Correct or Remove Outliers**
+
+**Action:**
+- Identified and corrected or removed outliers that could distort analysis results.
+
+**Process:**
+1. Sorted the 'Billing Amount' column from largest to smallest to identify outliers.
+2. Applied Conditional Formatting to highlight values above or below certain thresholds:
+   - Selected the 'Billing Amount' column.
+   - Applied `Highlight Cells Rules > Greater Than` and set a threshold value.
+   - Choose a fill colour to highlight outliers.
+3. Investigated highlighted values to determine if they were data entry errors or legitimate outliers.
+4. Corrected data entry errors and removed irrelevant outliers from the analysis.
+
+**Outcome:**
+- Outliers were managed appropriately, ensuring that the data reflects realistic billing scenarios.
+
+
+**Step 6: Remove Unwanted Characters**
+
+**Action:**
+- Removed unwanted characters (e.g., commas) from text fields to improve data consistency.
+
+**Process:**
+1. Selected the column containing unwanted characters.
+2. Opened the Find and Replace dialog box by pressing `Command + F` (Mac).
+3. In the `Replace` tab, entered the unwanted character (`,`) in the "Find what" field.
+4. Left the "Replace with" field blank.
+5. Clicked `Replace All` to remove all instances of the unwanted character.
+
+**Outcome:**
+- Unwanted characters were successfully removed, ensuring clean and consistent text data.
+
+
+**Step 7: Validate Relationships Between Data**
+
+**Action:**
+- Ensured logical consistency between related data points, such as 'Admission Date' and 'Discharge Date'.
+
+**Process:**
+1. Created a new column named "Date Check" to validate the relationship between 'Admission Date' and 'Discharge Date'.
+2. Entered the following formula in the new column:
+   ```excel
+   =IF(C2 > B2, "Valid", "Invalid")
+   ```
+   - This formula checks if the 'Discharge Date' (C2) is after the 'Admission Date' (B2).
+3. Dragged the formula down the column to apply it to all rows.
+4. Reviewed the "Date Check" column to identify any "Invalid" entries.
+5. Investigated and corrected any rows where the discharge date occurred before the admission date.
+
+**Outcome:**
+- Logical consistency between dates was verified, and any inconsistencies were corrected.
+
+
+
+**Step 8: Final Data Review**
+
+**Action:**
+- Conducted a final review to ensure the dataset is fully cleaned and ready for analysis.
+
+**Process:**
+1. Reviewed all columns for completeness and consistency.
+2. Applied filters and sorting to double-check for any remaining errors or inconsistencies.
+3. Saved the cleaned dataset as a new file to preserve the original data.
+
+**Outcome:**
+- The dataset was successfully cleaned, ensuring that it is accurate, consistent, and ready for in-depth analysis.
